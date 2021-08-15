@@ -1,0 +1,157 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_POT RV1
+U 1 1 612B7567
+P 3900 2450
+F 0 "RV1" H 3830 2496 50  0000 R CNN
+F 1 "FREQ 100k" H 3830 2405 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 3900 2450 50  0001 C CNN
+F 3 "~" H 3900 2450 50  0001 C CNN
+	1    3900 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV2
+U 1 1 612B80D8
+P 4950 2450
+F 0 "RV2" H 4881 2496 50  0000 R CNN
+F 1 "RES 100k" H 4881 2405 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical" H 4950 2450 50  0001 C CNN
+F 3 "~" H 4950 2450 50  0001 C CNN
+	1    4950 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 612B838A
+P 3900 2750
+F 0 "R1" H 3970 2796 50  0000 L CNN
+F 1 "R*" H 3970 2705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3830 2750 50  0001 C CNN
+F 3 "~" H 3900 2750 50  0001 C CNN
+	1    3900 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J1
+U 1 1 612BC721
+P 2800 2550
+F 0 "J1" H 2880 2592 50  0000 L CNN
+F 1 "CONTROL" H 2880 2501 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H 2800 2550 50  0001 C CNN
+F 3 "~" H 2800 2550 50  0001 C CNN
+	1    2800 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 2600 2350 0    50   Input ~ 0
+RES
+Text GLabel 2600 2450 0    50   Input ~ 0
+FREQ
+$Comp
+L power:-12V #PWR0101
+U 1 1 612BCE6B
+P 2200 3000
+F 0 "#PWR0101" H 2200 3100 50  0001 C CNN
+F 1 "-12V" H 2215 3173 50  0000 C CNN
+F 2 "" H 2200 3000 50  0001 C CNN
+F 3 "" H 2200 3000 50  0001 C CNN
+	1    2200 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0102
+U 1 1 612BD44C
+P 2200 2150
+F 0 "#PWR0102" H 2200 2000 50  0001 C CNN
+F 1 "+12V" H 2215 2323 50  0000 C CNN
+F 2 "" H 2200 2150 50  0001 C CNN
+F 3 "" H 2200 2150 50  0001 C CNN
+	1    2200 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 612BD8D5
+P 2450 3000
+F 0 "#PWR0103" H 2450 2750 50  0001 C CNN
+F 1 "GND" H 2455 2827 50  0000 C CNN
+F 2 "" H 2450 3000 50  0001 C CNN
+F 3 "" H 2450 3000 50  0001 C CNN
+	1    2450 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2750 2450 2750
+Wire Wire Line
+	2450 2750 2450 3000
+Wire Wire Line
+	2600 2650 2200 2650
+Wire Wire Line
+	2200 2650 2200 3000
+Wire Wire Line
+	2600 2550 2200 2550
+Wire Wire Line
+	2200 2550 2200 2150
+Text GLabel 4800 2450 0    50   Input ~ 0
+RES
+Text GLabel 3750 2450 0    50   Input ~ 0
+FREQ
+$Comp
+L power:GND #PWR0104
+U 1 1 612BF22A
+P 3900 2900
+F 0 "#PWR0104" H 3900 2650 50  0001 C CNN
+F 1 "GND" H 3905 2727 50  0000 C CNN
+F 2 "" H 3900 2900 50  0001 C CNN
+F 3 "" H 3900 2900 50  0001 C CNN
+	1    3900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR0105
+U 1 1 612C2635
+P 4950 2600
+F 0 "#PWR0105" H 4950 2700 50  0001 C CNN
+F 1 "-12V" H 4965 2773 50  0000 C CNN
+F 2 "" H 4950 2600 50  0001 C CNN
+F 3 "" H 4950 2600 50  0001 C CNN
+	1    4950 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR0106
+U 1 1 612C2F76
+P 4950 2300
+F 0 "#PWR0106" H 4950 2150 50  0001 C CNN
+F 1 "+12V" H 4965 2473 50  0000 C CNN
+F 2 "" H 4950 2300 50  0001 C CNN
+F 3 "" H 4950 2300 50  0001 C CNN
+	1    4950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0107
+U 1 1 612C338C
+P 3900 2300
+F 0 "#PWR0107" H 3900 2150 50  0001 C CNN
+F 1 "+12V" H 3915 2473 50  0000 C CNN
+F 2 "" H 3900 2300 50  0001 C CNN
+F 3 "" H 3900 2300 50  0001 C CNN
+	1    3900 2300
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
